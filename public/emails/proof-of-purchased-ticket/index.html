@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <title>HolaFOMO - Nueva Venta de Ticket</title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    p {
+      display: block;
+      margin: 0;
+    }
+
+    /* Modern Design Styles */
+    .card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background-color: #F95F2E;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      text-align: center;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(249, 95, 46, 0.25);
+    }
+
+    .btn:hover {
+      background-color: #e54e1e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(249, 95, 46, 0.3);
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, rgba(231, 214, 255, 0), rgba(231, 214, 255, 1), rgba(231, 214, 255, 0));
+      margin: 30px 0;
+    }
+
+    .social-icon {
+      display: inline-block;
+      margin: 0 8px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Poppins', Arial, sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    p,
+    span,
+    a,
+    div {
+      font-family: 'Inter', Arial, sans-serif;
+      letter-spacing: -0.01em;
+    }
+
+    .highlight {
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background-color: rgba(249, 95, 46, 0.2);
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .image-container {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .emoji-container {
+      background: linear-gradient(135deg, #F4F0F9 0%, #FFFFFF 100%);
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0 6px 15px rgba(115, 108, 237, 0.15);
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #F4F0F9 0%, #FFFFFF 100%);
+    }
+
+    .header-gradient {
+      background: linear-gradient(135deg, #F95F2E 0%, #FF7E54 100%);
+    }
+
+    .info-section {
+      background-color: #F8F9FA;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 4px solid #F95F2E;
+    }
+
+    .info-grid {
+      width: 100%;
+    }
+
+    .info-row {
+      margin-bottom: 15px;
+    }
+
+    .info-label {
+      font-size: 13px;
+      color: #777777;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 5px;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+
+    .info-value {
+      font-size: 16px;
+      color: #2D2A29;
+      font-weight: 500;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+
+    .stats-container {
+      background: linear-gradient(135deg, rgba(115, 108, 237, 0.1) 0%, rgba(115, 108, 237, 0.05) 100%);
+      border-radius: 16px;
+      padding: 25px;
+      margin: 20px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: #F95F2E;
+      font-family: 'Poppins', Arial, sans-serif;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #736CED;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+
+    .progress-bar {
+      background-color: #E9ECEF;
+      height: 8px;
+      border-radius: 4px;
+      margin: 15px 0;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      background: linear-gradient(90deg, #F95F2E, #FF7E54);
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
+    .countdown-box {
+      background: linear-gradient(135deg, #736CED 0%, #9B59B6 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(115, 108, 237, 0.3);
+    }
+
+    .countdown-number {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    .total-highlight {
+      background: linear-gradient(135deg, #F95F2E 0%, #FF7E54 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 16px;
+      text-align: center;
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(249, 95, 46, 0.3);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2D2A29;
+      margin-bottom: 15px;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+  </style>
+  <!--[if mso]>
+    <noscript
+      ><xml
+        ><o:OfficeDocumentSettings
+          ><o:AllowPNG /><o:PixelsPerInch
+            >96</o:PixelsPerInch
+          ></o:OfficeDocumentSettings
+        ></xml
+      ></noscript
+    >
+  <![endif]-->
+  <!--[if lte mso 11]>
+    <style type="text/css">
+      .y {
+        width: 100% !important;
+      }
+    </style>
+  <![endif]-->
+  <!--[if !mso]><!-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet" type="text/css" />
+  <!--<![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width: 599px) {
+      .container {
+        width: 580px !important;
+        max-width: 580px;
+      }
+    }
+  </style>
+  <style media="screen and (min-width:599px)">
+    .moz-text-html .container {
+      width: 580px !important;
+      max-width: 580px;
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width: 598px) {
+      table.full-width-mobile {
+        width: 100% !important;
+      }
+
+      td.full-width-mobile {
+        width: auto !important;
+      }
+
+      .mobile-padding {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .mobile-center {
+        text-align: center !important;
+      }
+
+      /* Notificación de Venta alineada a la izquierda en mobile */
+      .venta-mobile-align {
+        text-align: left !important;
+        align-items: flex-start !important;
+      }
+
+      .venta-mobile-align h1,
+      .venta-mobile-align p,
+      .venta-mobile-align span {
+        text-align: left !important;
+      }
+
+      .stat-number {
+        font-size: 24px !important;
+      }
+
+      .countdown-number {
+        font-size: 36px !important;
+      }
+
+      .stack-on-mobile td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .stack-on-mobile tr {
+        display: block !important;
+        width: 100% !important;
+      }
+
+      /* Más espacio entre Precio del Ticket y Descuento Aplicado en mobile */
+      .stack-on-mobile .info-row+.info-row {
+        margin-top: 18px !important;
+      }
+
+      /* Menos espaciado superior para el botón CTA en mobile */
+      .cta-mobile-spacing {
+        padding-top: 0px !important;
+      }
+
+      .rec-mobile-spacing {
+        padding-bottom: 10px !important;
+      }
+
+      /* Total pagado: texto arriba y menos peso en mobile */
+      .total-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .total-mobile-label {
+        order: -1;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        color: #fff !important;
+        opacity: 0.92;
+        margin-bottom: 2px !important;
+      }
+
+      .total-mobile-amount {
+        font-size: 28px !important;
+        font-weight: 700 !important;
+        color: #fff !important;
+      }
+
+      /* Menos espacio entre texto y número en Resumen de Ventas y Cuenta Regresiva */
+      .total-highlight h3,
+      .countdown-box .countdown-number {
+        margin-bottom: 2px !important;
+      }
+
+      .total-highlight,
+      .countdown-box {
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (min-width: 599px) {
+      .total-bold-label {
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: #fff !important;
+        margin-bottom: 4px !important;
+        display: block;
+        text-align: center;
+      }
+
+      .total-bold-amount {
+        font-size: 32px !important;
+        font-weight: 800 !important;
+        color: #fff !important;
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body style="
+    background-color: #F4F0F9;
+    font-family: 'Inter', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  ">
+  <div class="gradient-bg" style="padding: 40px 20px;">
+    <!-- Container -->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"
+      class="container">
+      <!-- Logo Header -->
+      <tr>
+        <td align="center" style="padding: 0 0 30px 0;">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 140px; margin: 0 auto;">
+            <tr>
+              <td align="center"
+                style="padding: 15px; background-color: white; border-radius: 16px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                <img src="https://joinfomo.s3.us-east-1.amazonaws.com/logo-fomo.png" alt="HolaFOMO" width="110"
+                  style="display: block; width: 110px; max-width: 110px; height: auto;" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- Notificación de tickets Fuera de la Tarjeta -->
+      <tr>
+        <td align="center" style="padding: 0 0 32px 0;">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"
+            style="max-width: 520px; margin: 0 auto; background: #fff; border-radius: 14px; box-shadow: 0 2px 8px rgba(115,108,237,0.06);"
+            class="venta-mobile-align">
+            <tr>
+              <td style="padding: 32px 24px 24px 24px; text-align: center;">
+                <!-- Icono y texto de notificación -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" style="padding-bottom: 12px;">
+                      <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="padding-right: 10px; vertical-align: middle;">
+                            <img src="./img/envelope.png" alt="email" width="18" height="18"
+                              style="display: block; width: 18px; height: 18px; max-width: 18px; max-height: 18px;" />
+                          </td>
+                          <td style="vertical-align: middle;">
+                            <span
+                              style="color: #736CED; font-size: 16px; font-family: 'Inter', Arial, sans-serif; font-weight: 600;">Notificación
+                              de tickets!</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- Título principal -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 8px;">
+                      <h1
+                        style="color: #2D2A29; font-size: 26px; font-weight: 700; margin: 0; line-height: 1.2; font-family: 'Poppins', Arial, sans-serif;">
+                        Felicitaciones, un nuevo ticket fue adquirido.</h1>
+                    </td>
+                  </tr>
+                  <!-- Texto descriptivo -->
+                  <tr>
+                    <td align="center">
+                      <p style="color: #2D2A29; font-size: 17px; margin: 0; font-family: 'Inter', Arial, sans-serif;">
+                        Alguien acaba de inscribirse a tu evento</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Main Content Card -->
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="card"
+            style="background-color: #FFFFFF;">
+            <!-- Header Banner -->
+            <tr>
+              <td class="header-gradient"
+                style="padding: 30px; text-align: left; border-radius: 16px 16px 0 0; position: relative;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                  <tr>
+                    <td style="vertical-align: top; width: 60%;">
+                      <div style="display: flex; align-items: center; gap: 14px;">
+                        <span
+                          style="display: inline-block; background: rgba(255,255,255,0.18); border-radius: 12px; padding: 10px;">
+                          <span style="display:inline-block; vertical-align:middle; width:28px; height:28px;">
+                            <img src="./img/calendar.png" alt="email" width="28" height="28"
+                              style="display: block; width: 28px; height: 28px; max-width: 28px; max-height: 28px;" />
+                          </span>
+                        </span>
+                        <div>
+                          <div
+                            style="color: #fff; font-size: 22px; font-weight: 700; font-family: 'Poppins', Arial, sans-serif;">
+                            Webinar: Líderes en la era IA: Qué aprender (y qué ignorar) para enfrentar la incertidumbre
+                            digital</div>
+                          <div
+                            style="color: #fff; font-size: 14px; opacity: 0.85; font-family: 'Inter', Arial, sans-serif;">
+                            Gestión de Eventos</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <div style="margin-top: 10px;"></div>
+              </td>
+            </tr>
+
+            <!-- Detalles de la Compra -->
+            <tr>
+              <td style="padding: 40px 40px 20px 40px;" class="mobile-padding">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <img src="./img/document-text.png" alt="email" width="18" height="18"
+                    style="display: block; width: 18px; height: 18px; max-width: 18px; max-height: 18px;" />
+                  <div class="section-title" style="margin: 0;">Detalle del ticket</div>
+                </div>
+                <div class="info-section">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="info-grid stack-on-mobile">
+                    <tr>
+                      <td width="50%" style="padding-right: 10px;" class="info-row">
+                        <div class="info-label">Nombre del Comprador</div>
+                        <div class="info-value">María González Rodríguez</div>
+                      </td>
+                      <td width="50%" style="padding-left: 10px;" class="info-row">
+                        <div class="info-label">Tipo de Ticket</div>
+                        <div class="info-value">VIP - Acceso Completo</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" style="height: 15px;"></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" style="padding-right: 10px;" class="info-row">
+                        <div class="info-label">Fecha y Hora de Compra</div>
+                        <div class="info-value">15 Ene 2025, 14:32</div>
+                      </td>
+                      <td width="50%" style="padding-left: 10px;" class="info-row">
+                        <div class="info-label">ID de Transacción</div>
+                        <div class="info-value">#TXN-789456123</div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Resumen de Pago -->
+            <tr>
+              <td style="padding: 20px 40px;" class="mobile-padding">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <img src="./img/credit-card.png" alt="email" width="18" height="18"
+                    style="display: block; width: 18px; height: 18px; max-width: 18px; max-height: 18px;" />
+                  <div class="section-title" style="margin: 0;">Resumen de Pago</div>
+                </div>
+                <div class="info-section">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="stack-on-mobile">
+                    <tr>
+                      <td width="50%" style="padding-right: 10px;" class="info-row">
+                        <div class="info-label">Precio del Ticket</div>
+                        <div class="info-value">$150.00 COP</div>
+                      </td>
+                      <td width="50%" style="padding-left: 10px;" class="info-row">
+                        <div class="info-label">Descuento Aplicado</div>
+                        <div class="info-value">-$15.00 COP (EARLY10)</div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="total-highlight total-mobile">
+                  <span class="total-mobile-label total-bold-label">Total pagado</span>
+                  <span class="total-mobile-amount total-bold-amount">$135.00 COP</span>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Estado del Evento -->
+            <tr>
+              <td style="padding: 20px 40px;" class="mobile-padding">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <span style="display:inline-block; vertical-align:middle; width:18px; height:18px;">
+                    <img src="./img/chart-pie.png" alt="email" width="18" height="18"
+                      style="display: block; width: 18px; height: 18px; max-width: 18px; max-height: 18px;" />
+                  </span>
+                  <div class="section-title" style="margin: 0;">Estado del Evento</div>
+                </div>
+                <div class="stats-container">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td width="50%" class="stat-item">
+                        <div class="stat-number">247</div>
+                        <div class="stat-label">Tickets Vendidos</div>
+                      </td>
+                      <td width="50%" class="stat-item">
+                        <div class="stat-number">53</div>
+                        <div class="stat-label">Tickets Disponibles</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="50%" class="stat-item">
+                        <div class="stat-number">300</div>
+                        <div class="stat-label">Aforo Total</div>
+                      </td>
+                      <td width="50%" class="stat-item">
+                        <div class="stat-number">82%</div>
+                        <div class="stat-label">Ocupación</div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 82%"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Resumen de Ventas -->
+            <tr>
+              <td style="padding: 20px 40px;" class="mobile-padding">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <img src="./img/currency-dollar.png" alt="email" width="18" height="18"
+                    style="display: block; width: 18px; height: 18px; max-width: 18px; max-height: 18px;" />
+                  <div class="section-title" style="margin: 0;">Resumen de Ventas</div>
+                </div>
+                <div class="total-highlight">
+                  <h3 style="font-size: 28px; margin: 0 0 10px 0; font-family: 'Poppins', Arial, sans-serif;">$33,345.00
+                    COP</h3>
+                  <p style="margin: 0; opacity: 0.9; font-family: 'Inter', Arial, sans-serif;">Total acumulado de
+                    ingresos del evento</p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Cuenta Regresiva -->
+            <tr>
+              <td style="padding: 20px 40px;" class="mobile-padding">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <img src="./img/hashtag.png" alt="email" width="18" height="18"
+                    style="display: block; width: 18px; height: 18px; max-width: 18px; max-height: 18px;" />
+                  <div class="section-title" style="margin: 0;">Cuenta Regresiva</div>
+                </div>
+                <div class="countdown-box">
+                  <h3 style="font-size: 48px; margin: 0 0 0 0; font-family: 'Poppins', Arial, sans-serif;">23</h3>
+                  <p style="margin: 0; font-size: 16px; font-family: 'Inter', Arial, sans-serif;">Días restantes para el
+                    evento</p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Recomendaciones -->
+            <tr>
+              <td style="padding: 20px 40px 40px 40px;" class="mobile-padding rec-mobile-spacing">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                  <img src="./img/check-circle.png" alt="email" width="18" height="18"
+                    style="display: block; width: 18px; height: 18px; max-width: 18px; max-height: 18px;" />
+                  <div class="section-title" style="margin: 0;">Recomendaciones</div>
+                </div>
+                <p
+                  style="color: #2D2A29; font-size: 17px; line-height: 1.7; margin-bottom: 24px; font-family: 'Inter', Arial, sans-serif;">
+                  Tu evento sigue creciendo!<span class="highlight" style="color: #F95F2E; font-weight: 600;">Revisa
+                    todos los detalles en tu panel de organizador!</span>
+                </p>
+              </td>
+            </tr>
+
+            <!-- CTA Button -->
+            <tr>
+              <td align="center" style="padding: 0 40px 50px 40px;" class="mobile-padding cta-mobile-spacing">
+                <a href="https://holafomo.com/organizador/dashboard" class="btn"
+                  style="background-color: #F95F2E; color: #FFFFFF; display: inline-block; font-size: 16px; font-weight: 600; line-height: 1; padding: 16px 36px; text-decoration: none; border-radius: 12px; font-family: 'Inter', Arial, sans-serif; box-shadow: 0 4px 10px rgba(249, 95, 46, 0.25);">Ver
+                  más detalles en tu panel</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Footer -->
+      <tr>
+        <td align="center"
+          style="padding: 40px 20px 0px 20px; color: #777777; font-size: 13px; line-height: 1.5; font-family: 'Inter', Arial, sans-serif;">
+          <p style="margin-bottom: 12px;">
+            &copy; 2025 HolaFOMO. Todos los derechos reservados.
+          </p>
+          <p>
+            Barranquilla, Colombia
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    // Objeto con información de ejemplo para el backend
+    const emailData = {
+      // Información del comprador
+      compradorNombre: "María González Rodríguez",
+
+      // Información del evento
+      eventoNombre: "Festival de Música Electrónica 2024",
+      tipoTicket: "VIP - Acceso Completo",
+      fechaCompra: "15 Ene 2025, 14:32",
+      metodoPago: "Tarjeta de Crédito (****1234)",
+      transaccionId: "#TXN-789456123",
+
+      // Información de pago
+      precioTicket: 150.00,
+      descuento: 15.00,
+      cuponCodigo: "EARLY10",
+      totalPagado: 135.00,
+      moneda: "COP",
+
+      // Estado del evento
+      ticketsVendidos: 247,
+      ticketsDisponibles: 53,
+      aforoTotal: 300,
+      porcentajeOcupacion: 82,
+
+      // Resumen de ventas
+      totalAcumulado: 33345.00,
+
+      // Cuenta regresiva
+      diasRestantes: 23,
+
+      // URLs y enlaces
+      panelOrganizadorUrl: "https://holafomo.com/organizador/dashboard",
+      logoEventoUrl: "https://joinfomo.s3.us-east-1.amazonaws.com/logo-fomo.png",
+
+      // Información de contacto
+      soporteEmail: "soporte@holafomo.com",
+      condicionesUrl: "https://holafomo.com/terminos",
+      privacidadUrl: "https://holafomo.com/privacidad",
+      ayudaUrl: "https://holafomo.com/ayuda"
+    };
+
+    console.log("Datos de ejemplo para el backend:", emailData);
+  </script>
+</body>
+
+</html>
