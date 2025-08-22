@@ -77,13 +77,16 @@ export const Navbar: React.FC<NavbarProps> = ({ specialMode = false }) => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo-fomo.png"
-                alt="FOMO Logo"
-                width={isSpecialView ? 140 : 100}
-                height={40}
-                className={logoClasses}
-              />
+              <div className={logoClasses} style={{ position: 'relative', width: isSpecialView ? '140px' : '100px', height: '40px' }}>
+                <Image
+                  src="/images/logo-fomo.png"
+                  alt="FOMO Logo"
+                  fill
+                  sizes="(max-width: 768px) 100px, 140px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </Link>
           </div>
 
@@ -202,25 +205,27 @@ export const Navbar: React.FC<NavbarProps> = ({ specialMode = false }) => {
             {isSpecialView && <div className="h-6 w-px bg-gray-200 mx-1"></div>}
 
             {/* Perfil de usuario */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className={`p-0 h-8 w-8 rounded-full ${buttonClasses} ${isSpecialView ? 'bg-transparent hover:bg-white/50' : 'hover:bg-gray-100'}`}
-                >
-                  <User className="h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
-                <DropdownMenuItem className="cursor-pointer hover:bg-gray-50">
-                  <User className="mr-2 h-4 w-4" />
-                  <span>Mi perfil</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer hover:bg-gray-50">
-                  <span>Cerrar sesión</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <div className="relative">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className={`p-0 h-8 w-8 rounded-full ${buttonClasses} ${isSpecialView ? 'bg-transparent hover:bg-white/50' : 'hover:bg-gray-100'} flex items-center justify-center`}
+                  >
+                    <User className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  <DropdownMenuItem className="cursor-pointer hover:bg-gray-50">
+                    <User className="mr-2 h-4 w-4" />
+                    <span>Mi perfil</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer hover:bg-gray-50">
+                    <span>Cerrar sesión</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
         </div>
       </div>

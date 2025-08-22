@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { Ticket, Tag, FormInput, Bell, CreditCard, QrCode, BarChart3, ShieldCheck, Users, DollarSign } from 'lucide-react'
+import React from 'react'
 
 const benefits = [
   {
@@ -66,21 +67,24 @@ export function BenefitsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300 border-0 bg-white rounded-2xl">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-[#F95F2E]/10 rounded-xl flex items-center justify-center">
-                    <benefit.icon className="h-6 w-6 text-[#F95F2E]" />
+          {benefits.map((benefit, index) => {
+            const IconComponent = benefit.icon;
+            return (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300 border-0 bg-white rounded-2xl">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#F95F2E]/10 rounded-xl flex items-center justify-center">
+                      <IconComponent className="h-6 w-6 text-[#F95F2E]" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

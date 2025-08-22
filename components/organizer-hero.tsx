@@ -13,13 +13,14 @@ export function OrganizerHero() {
         quality={100}
         sizes="100vw"
         className="object-cover z-0"
+        priority
       />
 
       {/* Overlay oscuro para mejorar la legibilidad del texto */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-20 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contenido izquierdo */}
           <div className="space-y-8">
@@ -63,6 +64,12 @@ export function OrganizerHero() {
                 Solicitar demo
               </Button>
             </div>
+          </div>
+          
+          {/* Columna derecha (puedes agregar contenido aquí) */}
+          <div className="hidden lg:block">
+            {/* Contenido opcional para la columna derecha */}
+          </div>
         </div>
       </div>
     </section>

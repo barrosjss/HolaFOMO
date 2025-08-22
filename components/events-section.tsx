@@ -1,4 +1,4 @@
-import { EventCard } from "@/components/event-card"
+import { EventCard } from "@/components/molecules/event-card"
 import { ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 
