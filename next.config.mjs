@@ -7,8 +7,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: false, // Cambia esto si deseas habilitar la optimización
+    domains: ["hebbkx1anhila5yf.public.blob.vercel-storage.com"], // Agrega el dominio aquí
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

@@ -1,10 +1,19 @@
-import ConfirmationCard from "@/components/confirmation-card"
+import { Navbar } from "@/components/navbar"
+import { HeroSection } from "@/components/hero-section"
+import { EventsSection } from "@/components/events-section"
+import { CreatorBanner } from "@/components/creator-banner"
+import { Footer } from "@/components/footer"
 
-export default function Page() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50">
-      <h1 className="text-3xl font-bold mb-10 text-center">Vista de pruebas</h1>
-      <ConfirmationCard />
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <EventsSection />
+        <CreatorBanner />
+      </main>
+      <Footer />
     </div>
   )
 }
