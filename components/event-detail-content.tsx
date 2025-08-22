@@ -84,7 +84,7 @@ export function EventDetailContent({ eventId }: EventDetailContentProps) {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-10">
           {/* Left Column - Event Image, Countdown, Organizer */}
           <div className="lg:col-span-5 space-y-6">
             <div className="sticky top-24 space-y-6">

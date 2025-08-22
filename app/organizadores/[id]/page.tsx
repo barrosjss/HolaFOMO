@@ -168,10 +168,10 @@ export default function OrganizerProfile({ params }: { params: { id: string } })
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
+      <Navbar specialMode={true}/>
 
       {/* Contenido principal */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-32 md:pt-36">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-20 md:pt-20">
         {/* Banner de portada */}
         <div className="h-48 md:h-64 w-full bg-gray-200 overflow-hidden rounded-xl mb-8">
           <Image

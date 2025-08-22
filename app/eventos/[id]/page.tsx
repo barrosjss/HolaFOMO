@@ -12,7 +12,7 @@ export default function EventDetailPage({ params }: EventDetailPageProps) {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <main className="pt-20">
+      <main>
         <EventDetailContent eventId={params.id} />
       </main>
       <Footer />
