@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
+import { AuthProvider } from '@/contexts/AuthContext'
 
 export const metadata: Metadata = {
   title: 'FOMO - Encuentra los mejores eventos',
@@ -37,9 +38,11 @@ export default function RootLayout({
         `}</style>
       </head>
       <body className="min-h-screen bg-white text-gray-900 antialiased">
-        <div className="flex flex-col min-h-screen">
-          {children}
-        </div>
+        <AuthProvider>
+          <div className="flex flex-col min-h-screen">
+            {children}
+          </div>
+        </AuthProvider>
       </body>
     </html>
   )

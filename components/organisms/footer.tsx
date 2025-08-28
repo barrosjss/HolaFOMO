@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link"
 
-export function Footer() {
+const Footer = () => {
   const footerLinks = [
     { title: "Privacidad", href: "/privacidad" },
     { title: "Términos y Condiciones", href: "/terminos" },
@@ -39,3 +41,5 @@ export function Footer() {
     </footer>
   )
 }
+
+export default Footer;

@@ -6,8 +6,8 @@ import { Calendar, MapPin, Share2, Heart, Clock, Users, ExternalLink } from "luc
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { OrganizerCard } from "@/components/organizer-card"
-import { CoHostsSection } from "@/components/co-hosts-section"
+import { OrganizerCard } from "@/components/molecules/organizer-card"
+import { CoHostsSection } from "@/components/organisms/event/CoHostsSection"
 
 interface EventDetailContentProps {
   eventId: string
@@ -24,7 +24,7 @@ const mockEvent = {
   location:
     "La ubicación es confidencial y solo será revelada a las personas seleccionadas, unos días antes del evento.",
   image:
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-08-21%20at%205.46.04%E2%80%AFPM-YggFsxnJuXrdyrkay8npGR5E6Z6lXa.png",
+    "/placeholder.svg",
   price: "Gratis",
   ticketsAvailable: true,
   organizer: {
@@ -92,7 +92,7 @@ export function EventDetailContent({ eventId }: EventDetailContentProps) {
               <div className="relative group">
                 <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-gray-100">
                   <Image
-                    src={"/placeholder.svg"}
+                    src={mockEvent.image}
                     alt={mockEvent.title}
                     fill
                     className="object-cover"
@@ -198,7 +198,7 @@ export function EventDetailContent({ eventId }: EventDetailContentProps) {
                       </div>
                       <div>
                         <h4 className="font-medium text-gray-900">Ubicación</h4>
-                        <p className="text-gray-600">Oz Park, Chicago, Illinois</p>
+                        <p className="text-gray-600">{mockEvent.location}</p>
                         <Button variant="link" className="text-[#F95F2E] p-0 h-auto text-sm font-medium">
                           Ver en el mapa
                         </Button>

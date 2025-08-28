@@ -1,30 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { Heart, MapPin, Star, StarHalf } from 'lucide-react'
+import { Heart, MapPin, Star, StarHalf, Clock } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
-
-interface Event {
-  id: number
-  title: string
-  date: string
-  city: string
-  image: string
-  price: string
-  venue?: string
-  rating?: number
-  reviewCount?: number
-  dateRange?: string
-}
+import { Event } from "@/types/event.types"
 
 interface EventCardProps {
   event: Event
 }
 
 export function EventCard({ event }: EventCardProps) {
-  const [isFavorite, setIsFavorite] = useState(false)
+  const [isFavorite, setIsFavorite] = useState(event.isFavorite || false)
 
   // Función para renderizar estrellas
   const renderStars = (rating = 0) => {
@@ -49,8 +37,8 @@ export function EventCard({ event }: EventCardProps) {
   }
 
   return (
-    <Link href={`/eventos/${event.id}`} className="block">
-      <div className="flex-shrink-0 w-[240px] bg-white cursor-pointer">
+      <div className="flex-shrink-0 w-full max-w-[240px] bg-white cursor-pointer">
+        <Link href={`/eventos/${event.id}`} className="block w-full">
         {/* Imagen superior */}
         <div className="relative">
           <Image
@@ -62,9 +50,11 @@ export function EventCard({ event }: EventCardProps) {
           />
 
           {/* Overlay de branding */}
-          <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm rounded-md px-2 py-1">
-            <span className="text-white text-xs font-medium">fever presents Candlelight</span>
-          </div>
+          {event.organizer && (
+            <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm rounded-md px-2 py-1">
+              <span className="text-white text-xs font-medium">{event.organizer}</span>
+            </div>
+          )}
 
           {/* Botón de favorito */}
           <Button
@@ -88,29 +78,45 @@ export function EventCard({ event }: EventCardProps) {
           {/* Ubicación */}
           <div className="flex items-center space-x-1 mt-2">
             <MapPin className="h-3 w-3 text-gray-600" />
-            <span className="text-xs text-gray-700">{event.venue || event.city}</span>
+            <span className="text-xs text-gray-700">{event.location}</span>
           </div>
 
           {/* Título */}
           <h3 className="font-bold text-[15px] text-[#1A1A1A] leading-tight line-clamp-2 mt-1 mb-1">{event.title}</h3>
 
-          {/* Rating */}
-          <div className="flex items-center space-x-1 mt-1">
-            <div className="flex items-center space-x-0.5">{renderStars(event.rating || 4.5)}</div>
-            <span className="text-[13px] text-gray-500">({event.reviewCount || 127})</span>
-          </div>
+          {/* Rating - Optional */}
+          {event.rating !== undefined && (
+            <div className="flex items-center space-x-1 mt-1">
+              <div className="flex items-center space-x-0.5">{renderStars(event.rating)}</div>
+              {event.reviewCount && (
+                <span className="text-[13px] text-gray-500">({event.reviewCount})</span>
+              )}
+            </div>
+          )}
 
-          {/* Fecha */}
-          <div className="mt-1">
-            <span className="text-[13px] text-gray-700">{event.dateRange || event.date}</span>
+          {/* Fecha y Hora */}
+          <div className="mt-1 flex items-center space-x-2">
+            <span className="text-[13px] text-gray-700">{event.date}</span>
+            {event.time && (
+              <span className="text-[13px] text-gray-500 flex items-center">
+                <Clock className="h-3 w-3 mr-1" />
+                {event.time}
+              </span>
+            )}
           </div>
 
           {/* Precio */}
-          <div className="mt-1">
-            <span className="font-medium text-[14px] text-gray-900">Desde {event.price}</span>
-          </div>
+          {event.price !== undefined && (
+            <div className="mt-1">
+              <span className="font-medium text-[14px] text-gray-900">
+                {typeof event.price === 'number' 
+                  ? `$${event.price.toLocaleString()}` 
+                  : event.price}
+              </span>
+            </div>
+          )}
         </div>
+        </Link>
       </div>
-    </Link>
   )
 }

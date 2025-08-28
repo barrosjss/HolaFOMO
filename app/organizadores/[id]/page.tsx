@@ -4,9 +4,9 @@
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import { ExternalLink } from "lucide-react"
-import { EventGroup } from "@/components/organizer-event-card"
+import { EventGroup } from "@/components/molecules/organizer-event-card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Navbar } from "@/components/organisms/navbar"
+import Navbar from "@/components/organisms/navbar"
 
 // Mock data - Reemplazar con datos reales de tu API
 const mockOrganizer = {

@@ -21,7 +21,7 @@ interface Organizer {
 
 interface OrganizerCardProps {
   organizer: Organizer;
-  variant?: "default" | "compact";
+  variant?: "default" | "compact" | "minimal";
 }
 
 const socialIcons = {
@@ -37,6 +37,26 @@ export function OrganizerCard({ organizer, variant = "default" }: OrganizerCardP
     const Icon = socialIcons[platform as keyof typeof socialIcons] || Globe;
     return <Icon className="h-4 w-4 text-gray-500 hover:text-[#F95F2E] transition-colors" />;
   };
+  
+  if (variant === 'minimal') {
+    return (
+      <div className="flex items-center space-x-3 p-3 -mx-3 hover:bg-gray-50 rounded-lg transition-colors">
+        <div className="relative h-12 w-12 flex-shrink-0 rounded-full overflow-hidden bg-gray-100">
+          <Image
+            src={organizer.logo || "/placeholder-user.jpg"}
+            alt={organizer.name}
+            width={48}
+            height={48}
+            className="object-cover"
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-sm font-medium text-gray-900 truncate">{organizer.name}</h3>
+          <p className="text-xs text-gray-500 truncate">Organizador principal</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-4">

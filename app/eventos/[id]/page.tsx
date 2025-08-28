@@ -1,6 +1,5 @@
-import { Navbar } from "@/components/organisms/navbar"
-import { Footer } from "@/components/organisms/footer"
-import { EventDetailContent } from "@/components/event-detail-content"
+import Navbar from "@/components/organisms/navbar"
+import { EventDetailContent } from "@/components/organisms/event/EventDetailContent"
 
 interface EventDetailPageProps {
   params: {
@@ -15,7 +14,6 @@ export default function EventDetailPage({ params }: EventDetailPageProps) {
       <main>
         <EventDetailContent eventId={params.id} />
       </main>
-      <Footer />
     </div>
   )
 }

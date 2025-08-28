@@ -1,21 +1,21 @@
-"use client"
+'use client';
 
-import Image from "next/image"
-import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import Image from 'next/image';
+import Link from 'next/link';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
-interface CoHost {
-  id: string
-  name: string
-  avatar: string
-  title: string
-  profileUrl: string
+export interface CoHost {
+  id: string;
+  name: string;
+  avatar: string;
+  title: string;
+  profileUrl: string;
 }
 
-interface CoHostsSectionProps {
-  coHosts: CoHost[]
+export interface CoHostsSectionProps {
+  coHosts: CoHost[];
 }
 
 export function CoHostsSection({ coHosts }: CoHostsSectionProps) {
@@ -77,5 +77,7 @@ export function CoHostsSection({ coHosts }: CoHostsSectionProps) {
         </div>
       )}
     </div>
-  )
+  );
 }
+
+export default CoHostsSection;
