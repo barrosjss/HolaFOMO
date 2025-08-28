@@ -1,8 +1,8 @@
-import { Navbar } from "@/components/organisms/navbar"
-import { HeroSection } from "@/components/hero-section"
-import { EventsSection } from "@/components/events-section"
-import { CreatorBanner } from "@/components/creator-banner"
-import { Footer } from "@/components/organisms/footer"
+import Navbar from "@/components/organisms/navbar"
+import { HeroSection } from "@/components/organisms/home/HeroSection"
+import { EventsSection } from "@/components/organisms/events/EventsSection"
+import { CreatorBanner } from "@/components/organisms/creator/CreatorBanner"
+import Footer from "@/components/organisms/footer"
 
 export default function HomePage() {
   return (
