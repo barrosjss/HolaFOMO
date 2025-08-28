@@ -69,51 +69,69 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               />
             </div>
             
-            {/* Right side - Profile section */}
-            <div className="flex items-center space-x-2 bg-white/80 backdrop-blur-lg rounded-full p-1 shadow-lg border border-gray-100">
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="rounded-full h-10 w-10 hover:bg-gray-100"
-              >
-                <Bell className="h-5 w-5 text-gray-600" />
-              </Button>
+            {/* Right side - Actions */}
+            <div className="flex items-center space-x-2">
+              {/* Create Event Button */}
+              <div className="flex items-center space-x-2 bg-[#F95F2E] backdrop-blur-lg rounded-full p-1 shadow-lg border border-[#e65100] hover:bg-[#e65100] transition-colors">
+                <Button 
+                  variant="ghost" 
+                  className="rounded-full h-10 px-4 text-sm font-medium text-white hover:bg-white/20 flex items-center space-x-2"
+                  onClick={() => {
+                    // Add your event creation logic here
+                    console.log('Create new event clicked');
+                  }}
+                >
+                  <span>+</span>
+                  <span>Crear evento</span>
+                </Button>
+              </div>
               
-              <div className="relative group" ref={dropdownRef}>
+              {/* Profile section */}
+              <div className="flex items-center space-x-2 bg-white/80 backdrop-blur-lg rounded-full p-1 shadow-lg border border-gray-100">
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="rounded-full h-10 w-10 p-0 overflow-hidden"
-                  onClick={() => {
-                    const dropdown = document.getElementById('profile-dropdown');
-                    dropdown?.classList.toggle('hidden');
-                  }}
+                  className="rounded-full h-10 w-10 hover:bg-gray-100"
                 >
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-r from-[#F95F2E] to-[#FF9A5A] flex items-center justify-center text-white font-semibold">
-                    {user?.name?.[0]?.toUpperCase() || 'U'}
-                  </div>
+                  <Bell className="h-5 w-5 text-gray-600" />
                 </Button>
                 
-                {/* Dropdown Menu */}
-                <div 
-                  id="profile-dropdown" 
-                  className="hidden absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50"
-                >
-                  <div className="px-4 py-3 border-b border-gray-100">
-                    <p className="text-sm font-medium text-gray-900 truncate">{user?.name || 'Usuario'}</p>
-                    <p className="text-xs text-gray-500 truncate">{user?.email || 'usuario@ejemplo.com'}</p>
-                  </div>
-                  <div className="py-1">
-                    <button
-                      onClick={() => {
-                        logout();
-                        document.getElementById('profile-dropdown')?.classList.add('hidden');
-                      }}
-                      className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center space-x-2"
-                    >
-                      <LogOut className="h-4 w-4" />
-                      <span>Cerrar sesión</span>
-                    </button>
+                <div className="relative group" ref={dropdownRef}>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="rounded-full h-10 w-10 p-0 overflow-hidden"
+                    onClick={() => {
+                      const dropdown = document.getElementById('profile-dropdown');
+                      dropdown?.classList.toggle('hidden');
+                    }}
+                  >
+                    <div className="h-10 w-10 rounded-full bg-gradient-to-r from-[#F95F2E] to-[#FF9A5A] flex items-center justify-center text-white font-semibold">
+                      {user?.name?.[0]?.toUpperCase() || 'U'}
+                    </div>
+                  </Button>
+                
+                  {/* Dropdown Menu */}
+                  <div 
+                    id="profile-dropdown" 
+                    className="hidden absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50"
+                  >
+                    <div className="px-4 py-3 border-b border-gray-100">
+                      <p className="text-sm font-medium text-gray-900 truncate">{user?.name || 'Usuario'}</p>
+                      <p className="text-xs text-gray-500 truncate">{user?.email || 'usuario@ejemplo.com'}</p>
+                    </div>
+                    <div className="py-1">
+                      <button
+                        onClick={() => {
+                          logout();
+                          document.getElementById('profile-dropdown')?.classList.add('hidden');
+                        }}
+                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center space-x-2"
+                      >
+                        <LogOut className="h-4 w-4" />
+                        <span>Cerrar sesión</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
