@@ -20,7 +20,7 @@ export const InvitationEmail = () => (
         <Section style={logoSection}>
           <Img
             src="https://holafomo.com/_next/static/media/logo-fomo.15220965.svg"
-            width="80"
+            width="60"
             height="40"
             alt="FOMO Logo"
             style={logo}
