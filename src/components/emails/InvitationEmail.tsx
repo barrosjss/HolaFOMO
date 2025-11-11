@@ -133,7 +133,7 @@ const buttonSection = {
 };
 
 const button = {
-  backgroundColor: '#000000',
+  backgroundColor: '#F95F2E',
   borderRadius: '8px',
   color: '#ffffff',
   fontSize: '16px',
@@ -152,7 +152,7 @@ const specialNote = {
   textAlign: 'center' as const,
   marginBottom: '32px',
   padding: '16px',
-  backgroundColor: '#fff9e6',
+  backgroundColor: '#F4F0F9',
   borderRadius: '8px',
 };
 
