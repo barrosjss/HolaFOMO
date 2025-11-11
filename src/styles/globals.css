@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importamos el sistema de diseño de FOMO */
+@import './fomo-design-system.css';
+
+/* Definición de variables CSS */
+:root {
+  --color-primary: var(--color-orange-400);
+  --color-secondary: var(--color-purple-400);
+  --color-dark: var(--color-text-secondary);
+  --color-light: var(--color-bg-lightest);
+}
+
+/* Estilos base personalizados */
+@layer base {
+  body {
+    @apply bg-white text-gray-800 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900;
+  }
+  
+  h1 { @apply text-4xl md:text-5xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+  h5 { @apply text-lg md:text-xl; }
+  h6 { @apply text-base md:text-lg; }
+  
+  a {
+    @apply text-primary hover:text-orange-400 transition-colors;
+  }
+}
+
+/* Componentes personalizados */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-orange-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-purple-500;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-orange-50;
+  }
+}
+
+/* Utilidades personalizadas */
+@layer utilities {
+  .text-primary { color: var(--color-primary); }
+  .text-secondary { color: var(--color-secondary); }
+  .text-dark { color: var(--color-dark); }
+  
+  .bg-primary { background-color: var(--color-primary); }
+  .bg-secondary { background-color: var(--color-secondary); }
+  .bg-dark { background-color: var(--color-dark); }
+  .bg-light { background-color: var(--color-light); }
+  
+  .border-primary { border-color: var(--color-primary); }
+  .border-secondary { border-color: var(--color-secondary); }
+  
+  .fomo-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .fomo-shadow-hover {
+    transition: box-shadow 0.3s ease;
+  }
+  .fomo-shadow-hover:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+}
